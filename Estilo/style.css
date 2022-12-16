@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sedgwick+Ave+Display&display=swap');
+/*layout*/
+body{
+    margin: 0;
+    background: linear-gradient(white 30%,#F2CB05 57%, rgb(224, 111, 74), rgb(4, 101, 186) 90%);
+}
+
+main{
+    width: 100%;
+}
+
+#hero h1{
+    font-family: 'Permanent Marker', cursive;
+    color: blue;
+    font-size: 100px;
+}
+#hero img{
+    height: 50vh;
+}
+#hero .grid2{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/*introduccion*/
+#quees p{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*galeria*/
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column {
+    -ms-flex: 25%
+    flex: 25%;
+    max-width: 90%;
+    padding: 2 4px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height:90%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*nav*/
+.topnav {
+    overflow: hidden;
+    background-color: #F2507B;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+    text-align: center;
+    padding-bottom: 35px;
+}
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+    font-size: 45px;
+        
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*footer*/
+footer{
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+a{
+    color: white;
+    text-align: center;
+}
+
+/*media queries*/
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    #galeria .row {grid-template-columns: auto;}
+
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+  }
